@@ -1,0 +1,78 @@
+.main-con{
+    display: grid;
+    background-color: lightcyan;
+    height: 100vh;
+}
+.main-title{
+    background-color: rgb(68, 209, 252);
+    text-align: center;
+    font-family: monospace;
+    color: white;
+}
+.title{
+    padding-top: 25px;
+    margin: 0px;
+}
+.title-des{
+    padding-top: 0px;
+    padding-bottom: 15px;
+    font-size: large;
+    font-weight: 500;
+}
+.outer-con {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 132px;
+    margin-top: 0px;
+    font-family: monospace;
+    background-color: lightcyan;
+    width: auto;
+}
+.logo{
+    color: rgb(68, 209, 252);
+    filter: brightness(1.4) contrast(1.4) saturate(1.5);
+}
+.right-con{
+    text-align: justify;
+    color: rgb(68, 209, 252);
+    
+}
+.left-con{
+    text-align: center;
+}
+.bottom-right {
+    position: absolute;
+    bottom: -53px;
+    right: 127px;
+    color: rgb(68, 209, 252);
+}
+.img-con{
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+.content{
+    font-size: large;
+    padding: 50px 100px 0px 10px ;
+}
+.reg-btn,.log-btn{
+    padding: 15px 30px ;
+    background-color: rgb(68, 209, 252);
+    text-decoration: none;
+    color: white;
+    margin: 100px;
+    font-size: large;
+}
+.buttons{
+    margin: 50px 200px 30px 10px;
+}
+.footer-con{
+    background-color: rgb(68, 209, 252);
+    text-align: center;
+    font-family: monospace;
+    color: white;
+}
+.copyright{
+    margin: 5px;
+}
