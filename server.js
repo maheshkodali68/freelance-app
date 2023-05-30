@@ -120,4 +120,14 @@ app.get('/myreview', middleware, async (req, res) => {
         return res.status(500).send("Server Error!!");
     }
 })
+app.get('/profileReview',middleware, async(req, res) => {
+    try{
+        let allreviews = await review.find();
+        return res.json(allreviews);
+    }
+    catch(err){
+        console.log(err);
+        return res.status(500).send("Server Error!!");
+    }
+})
 app.listen(5000, () => console.log("Server is running...."))

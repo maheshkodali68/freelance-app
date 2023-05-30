@@ -63,7 +63,7 @@ const Login = () => {
           <button className="signin-btn-2">SIGN IN</button>
           <p className="redirect-link">
             Don't have an account?&nbsp;
-            <Link to="/register" style={{ color: "rgb(68, 209, 252)" }}>
+            <Link to="/register" style={{ color: "#2F3F2F" }}>
               <strong>Register</strong>
             </Link>
           </p>

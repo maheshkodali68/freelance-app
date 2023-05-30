@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import logo from "./Logo.png";
+import logo from "./home-logo.png";
+
 const Home = () => {
   return (
     <div className="main-con">
@@ -17,7 +18,6 @@ const Home = () => {
         <div className="left-con">
           <div className="img-con">
             <img src={logo} alt="LOGO" className="logo"></img>
-            <h1 className="bottom-right">FREELANCEHUB</h1>
           </div>
         </div>
         <div className="right-con">

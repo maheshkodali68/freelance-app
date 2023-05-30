@@ -132,7 +132,7 @@ const Register = () => {
           <button className="signin-btn">REGISTER</button>
           <p className="redirect-link">
             Already have an account?&nbsp;
-            <Link to="/login" style={{ color: "rgb(68, 209, 252)" }}>
+            <Link to="/login" style={{ color: "#2F3F2F" }}>
               <strong>Login</strong>
             </Link>
           </p>

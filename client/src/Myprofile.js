@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo} from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./MyProfile.css";
@@ -8,6 +8,13 @@ const Myprofile = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [review, setReview] = useState([]);
+  const [rate, setRate] = useState();
+
+  const Myrating = useMemo(() => {
+    const validRatings = review.map((item) => parseFloat(item.rating));
+    const totalRating = validRatings.reduce((sum, rating) => sum + rating, 0);
+    return validRatings.length > 0 ? totalRating / validRatings.length : 0;
+  }, [review]);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -25,9 +32,18 @@ const Myprofile = () => {
           headers: {
             "x-token": localStorage.getItem("token"),
           },
-        }).then((res) => setReview(res.data));
+        }).then((res) => {
+          setReview(res.data);
+          
+        });
     }
+    
   }, [navigate]);
+  useEffect(() => {
+    const formattedRating = Myrating.toFixed(1);
+    setRate(formattedRating);
+  }, [Myrating]);
+
   if (!localStorage.getItem("token")) {
     return <Link to="/login"></Link>;
   }
@@ -63,7 +79,7 @@ const Myprofile = () => {
           <p>Location : {data.location}</p>
           <p>Email : {data.email}</p>
           <p>Mobile : {data.mobile}</p>
-          
+          <p>Rating : {rate}</p>
         </div>
         <table className="table-con">
           <thead>

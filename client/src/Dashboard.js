@@ -55,7 +55,7 @@ const Dashboard = () => {
                   <div>
                     <img src={profpic} alt="loading.." className="profpic"></img>
                   </div>
-                  <div key={profile.email} className="details">
+                  <div key={profile.fullname} className="details">
                     <p>Name : {profile.fullname}</p>
                     <p>Skills : {profile.skills}</p>
                     <p>Location : {profile.location}</p>

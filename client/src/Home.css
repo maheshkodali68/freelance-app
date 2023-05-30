@@ -1,13 +1,13 @@
 .main-con{
     display: grid;
-    background-color: lightcyan;
+    background-color: #F2F2C2;
     height: 100vh;
 }
 .main-title{
-    background-color: rgb(68, 209, 252);
+    background-color: #2F3F2F;
     text-align: center;
     font-family: monospace;
-    color: white;
+    color: #F2F2C2;
 }
 .title{
     padding-top: 25px;
@@ -15,7 +15,6 @@
 }
 .title-des{
     padding-top: 0px;
-    padding-bottom: 15px;
     font-size: large;
     font-weight: 500;
 }
@@ -25,31 +24,28 @@
     padding-bottom: 132px;
     margin-top: 0px;
     font-family: monospace;
-    background-color: lightcyan;
+    background-color: #F2F2C2;
     width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .logo{
-    color: rgb(68, 209, 252);
-    filter: brightness(1.4) contrast(1.4) saturate(1.5);
+    height: 300px;
+    width: 500px;
+    filter: drop-shadow(2px 4px 6px black) sepia(1) hue-rotate(30deg);
 }
 .right-con{
     text-align: justify;
-    color: rgb(68, 209, 252);
+    color: #2F3F2F;
     
 }
 .left-con{
     text-align: center;
 }
-.bottom-right {
-    position: absolute;
-    bottom: -53px;
-    right: 127px;
-    color: rgb(68, 209, 252);
-}
 .img-con{
     position: relative;
     text-align: center;
-    color: white;
+    color: #F2F2C2;
     padding-top: 50px;
 }
 .content{
@@ -58,21 +54,22 @@
 }
 .reg-btn,.log-btn{
     padding: 15px 30px ;
-    background-color: rgb(68, 209, 252);
+    background-color: #2F3F2F;
     text-decoration: none;
-    color: white;
+    color: #F2F2C2;
     margin: 100px;
     font-size: large;
+    border-radius: 10px;
 }
 .buttons{
     margin: 50px 200px 30px 10px;
 }
 .footer-con{
-    background-color: rgb(68, 209, 252);
+    background-color: #2F3F2F;
     text-align: center;
     font-family: monospace;
-    color: white;
+    color: #F2F2C2;
 }
 .copyright{
-    margin: 5px;
+    margin: 0px;
 }

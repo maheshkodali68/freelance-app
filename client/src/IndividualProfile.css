@@ -16,12 +16,13 @@
 }
 
 .rating-btn {
-    background-color: rgb(68, 209, 252);
+    background-color: #2F3F2F;
     border: none;
     padding: 5px;
     cursor: pointer;
-    color: white;
+    color: #F2F2C2;
     font-family: monospace;
+    border-radius: 5px;
 }
 
 .individual-details {
@@ -32,7 +33,8 @@
     width: 200px;
     cursor: pointer;
     text-align: center;
-    background-color: rgb(68, 209, 252);
-    color: white;
+    background-color: #2F3F2F;
+    color: #F2F2C2;
     padding: 5px;
+    border-radius: 5px;
 }
