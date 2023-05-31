@@ -33,12 +33,11 @@ const Myprofile = () => {
             "x-token": localStorage.getItem("token"),
           },
         }).then((res) => {
-          setReview(res.data);
-          
+          setReview(res.data);     
         });
     }
-    
   }, [navigate]);
+  
   useEffect(() => {
     const formattedRating = Myrating.toFixed(1);
     setRate(formattedRating);
@@ -80,6 +79,7 @@ const Myprofile = () => {
           <p>Email : {data.email}</p>
           <p>Mobile : {data.mobile}</p>
           <p>Rating : {rate}</p>
+          <Link to='/updateProfile'><button>Edit Profile</button></Link>
         </div>
         <table className="table-con">
           <thead>
@@ -94,7 +94,7 @@ const Myprofile = () => {
             {review.length > 0 ? (
               review.map((review) => {
                 return (
-                  <tr className="tr-css" key={review.taskProvider}>
+                  <tr className="tr-css" >
                     <td className="td-css">{review.taskProvider}</td>
                     <td className="td-css">{review.rating}</td>
                   </tr>

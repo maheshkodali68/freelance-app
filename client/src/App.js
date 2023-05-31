@@ -6,6 +6,7 @@ import Register from './Register';
 import Dashboard from './Dashboard';
 import Myprofile from './Myprofile';
 import IndividualProfile from './IndividualProfile';
+import UpdateProfile from './UpdateProfile';
 const App = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='/dashboard' exact Component={Dashboard} />
           <Route path='/myprofile' exact Component={Myprofile} />
           <Route path='/individualProfile/:fullname/:email/:id/:mobile/:skills/:location' exact Component={IndividualProfile} />
+          <Route path='/updateProfile' exact Component={UpdateProfile}/>
         </Routes>
       </BrowserRouter>
     </div>

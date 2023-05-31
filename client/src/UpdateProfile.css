@@ -1,0 +1,28 @@
+.update-input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #2F3F2F;
+    background-color: #F2F2C2;
+    color: #2F3F2F;
+    font-size: 15px;
+    width: 80%;
+    margin-top: 15px;
+}
+.update-title{
+    color: #2F3F2F;
+    text-align: center;
+}
+.update-btn{
+    color: #F2F2C2;
+    background-color: #2F3F2F;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    float: left;
+    margin-left: 10%;
+}
+.update-profile{
+    text-align: center;
+}

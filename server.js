@@ -130,4 +130,29 @@ app.get('/profileReview',middleware, async(req, res) => {
         return res.status(500).send("Server Error!!");
     }
 })
+
+app.put('/profile', middleware, async (req, res) => {
+    try {
+      const { fullname, email, mobile, skills, location } = req.body;
+      const updateuser = await user.findById(req.person.id);
+      if (!updateuser) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      updateuser.fullname = fullname;
+      updateuser.skills = skills;
+      updateuser.location = location;
+      updateuser.email = email;
+      updateuser.mobile = mobile;
+  
+      await updateuser.save();
+  
+      return res.json({ message: 'Profile updated successfully' });
+    }
+    catch (err) {
+      console.log(err);
+      return res.status(500).send('Server Error');
+    }
+});
+  
 app.listen(5000, () => console.log("Server is running...."))

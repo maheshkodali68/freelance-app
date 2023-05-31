@@ -9,6 +9,7 @@ const Register = () => {
     mobile: "",
     email: "",
     skills: "",
+    location: "",
     password: "",
     confirmpassword: "",
   });
