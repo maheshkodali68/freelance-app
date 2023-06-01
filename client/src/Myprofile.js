@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo} from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./MyProfile.css";
@@ -20,24 +20,27 @@ const Myprofile = () => {
     const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
-    }
-    else {
-      axios.get("http://localhost:5000/myprofile", {
+    } else {
+      axios
+        .get("http://localhost:5000/myprofile", {
           headers: {
             "x-token": localStorage.getItem("token"),
           },
-        }).then((res) => setData(res.data));
-        
-      axios.get("http://localhost:5000/myreview", {
+        })
+        .then((res) => setData(res.data));
+
+      axios
+        .get("http://localhost:5000/myreview", {
           headers: {
             "x-token": localStorage.getItem("token"),
           },
-        }).then((res) => {
-          setReview(res.data);     
+        })
+        .then((res) => {
+          setReview(res.data);
         });
     }
   }, [navigate]);
-  
+
   useEffect(() => {
     const formattedRating = Myrating.toFixed(1);
     setRate(formattedRating);
@@ -79,12 +82,15 @@ const Myprofile = () => {
           <p>Email : {data.email}</p>
           <p>Mobile : {data.mobile}</p>
           <p>Rating : {rate}</p>
-          <Link to='/updateProfile'><button>Edit Profile</button></Link>
+          <Link to="/updateProfile">
+            <button>Edit Profile</button>
+          </Link>
         </div>
         <table className="table-con">
           <thead>
-            <tr className="review-title">MY RATINGS :</tr>
-            <br></br>
+            <tr className="review-title">
+              <th colSpan="2">MY RATINGS :</th>
+            </tr>
             <tr className="tr-css">
               <th className="th-css">TaskProvider</th>
               <th className="th-css">Rating</th>
@@ -94,7 +100,7 @@ const Myprofile = () => {
             {review.length > 0 ? (
               review.map((review) => {
                 return (
-                  <tr className="tr-css" >
+                  <tr key={review._id} className="tr-css">
                     <td className="td-css">{review.taskProvider}</td>
                     <td className="td-css">{review.rating}</td>
                   </tr>

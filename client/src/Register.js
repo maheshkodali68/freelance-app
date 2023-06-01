@@ -67,7 +67,7 @@ const Register = () => {
             name="fullname"
             placeholder="Enter Fullname"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>
@@ -77,7 +77,7 @@ const Register = () => {
             name="mobile"
             placeholder="Enter Mobile number"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>
@@ -87,7 +87,7 @@ const Register = () => {
             name="email"
             placeholder="Enter Email"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>
@@ -97,7 +97,7 @@ const Register = () => {
             name="skills"
             placeholder="Enter skills"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <input
@@ -106,7 +106,7 @@ const Register = () => {
             name="location"
             placeholder="Enter location"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>
@@ -116,7 +116,7 @@ const Register = () => {
             name="password"
             placeholder="Enter Password"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>
@@ -126,7 +126,7 @@ const Register = () => {
             name="confirmpassword"
             placeholder="Please confirm your password"
             onChange={changeHandler}
-            autoComplete="off"
+            autoComplete="new"
             required
           ></input>
           <br></br>

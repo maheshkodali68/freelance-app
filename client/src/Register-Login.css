@@ -17,7 +17,10 @@
     height: 100%;
     color: #F2F2C2;
     font-family: monospace;
-}  
+} 
+.right-container{
+    text-align: center;
+}
 .title-description{
     margin: 100px;
     font-size: medium;
